@@ -1,0 +1,23 @@
+classDiagram
+    class Usuario {
+        +String nome
+        +String email
+        +String senha
+    }
+
+    class Tarefa {
+        +String titulo
+        +String descricao
+        +Date dataVencimento
+        +String prioridade
+        +String status
+    }
+
+    class Categoria {
+        +String nome
+    }
+
+    Usuario "1" -- "*" Tarefa : gerencia
+    Tarefa "*" -- "1" Categoria : pertence a
+
+
